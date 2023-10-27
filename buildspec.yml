@@ -1,0 +1,22 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      java: 17
+  pre_build:
+    commands:
+    - echo In the pre_build phase...
+  build:
+    commands:
+    - echo Build started on `date`
+    - mvn install
+  post_build:
+    commands:
+    - echo Build completed on `date`
+    - mvn package
+    - mv target/cicd-demo-0.0.1-SNAPSHOT.war cicd-demo-0.0.1-SNAPSHOT.war
+artifacts:
+  files:
+  - cicd-demo-0.0.1-SNAPSHOT.war
+  - scripts/*
+  - .ebextensions/**/*
