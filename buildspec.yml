@@ -14,10 +14,10 @@ phases:
     commands:
     - echo Build completed on `date`
     - mvn package
-    - mv target/cicd-demo-0.0.1-SNAPSHOT.war cicd-demo-0.0.1-SNAPSHOT.war
+    # - mv target/cicd-demo-0.0.1-SNAPSHOT.jar cicd-demo-0.0.1-SNAPSHOT.jar
 artifacts:
   files:
-  - target/cicd-demo-0.0.1-SNAPSHOT.war
+  - target/cicd-demo-0.0.1-SNAPSHOT.jar
   - scripts/*
   - .ebextensions/**/*
   - appspec.yml
