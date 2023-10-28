@@ -17,6 +17,8 @@ phases:
     - mv target/cicd-demo-0.0.1-SNAPSHOT.war cicd-demo-0.0.1-SNAPSHOT.war
 artifacts:
   files:
-  - cicd-demo-0.0.1-SNAPSHOT.war
+  - tatrget/cicd-demo-0.0.1-SNAPSHOT.war
   - scripts/*
   - .ebextensions/**/*
+  - appspec.yml
+  discard-paths: yes
